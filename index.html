@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<style>
+
+body {
+  font: 10px sans-serif;
+}
+
+.axis path, .axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.arc {
+  fill:none;
+  /*stroke: #FF1493;*/
+  stroke: #888888;
+  /*stroke-width: 0.5px;*/
+  stroke-opacity: 0.5;
+}
+
+path.link {
+  fill: none;
+  stroke: #666;
+  stroke-width: 1.5px;
+}
+
+marker#licensing {
+  fill: green;
+}
+
+path.link.licensing {
+  stroke: green;
+}
+
+path.link.resolved {
+  stroke-dasharray: 0,2 1;
+}
+
+</style>
+<body>
+<script src="http://d3js.org/d3.v3.min.js"></script>
+<script src="http://d3js.org/queue.v1.min.js"></script>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Chr regions</title>
+
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600' rel='stylesheet' type='text/css'>
+  <link href="//netdna.bootstrapcdn.com/bootswatch/3.0.0/flatly/bootstrap.min.css" rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+
+  <div id="container" class="container">
+    <h1>Long Range Interactions</h1>
+    <div id="main" role="main">
+      <div id="legend">
+      </div>
+      <div id="vis">
+        <div id="previews"></div>
+        <div id="detail" class="hidden">
+          <div id="detail_panel">
+            <svg width="800" height="800">
+            <g id="detail_view"></g>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="console">
+    </div>
+    <div id="regions">
+    </div>
+    <script src="long_range_contacts.js"></script>
+</body>
+</html>
